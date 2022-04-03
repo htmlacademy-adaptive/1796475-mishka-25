@@ -7,7 +7,7 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo">
-        <img src="mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
+        <img src="../source/img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -74,7 +74,7 @@
             <dd class="featured__value">15 см</dd>
           </dl>
           <a class="featured_image-link" href="#">
-            <img class="featured_product-image"/>
+            <img class="featured_product-image" src="../source/img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки"/>
           </a>
           <span class="featured_product-price">Цена: 990 руб.</span>
           <button class="button featured_button">ЗАКАЗАТЬ</button>
@@ -82,36 +82,38 @@
       </section>
       <section class="about">
         <h2 class="about__title">Коротко о нас</h2>
-        <li class="about__list">
-          <a class="about__link about__link--flower" href="#">
-            Экологически чистые материалы
-          </a>
-        </li>
-        <li class="about__list">
-          <a class="about__link about__link--banknote" href="#">
-            Скандинавский стиль по российской цене
-          </a>
-        </li>
-        <li class="about__list">
-          <a class="about__link about__link--heart" href="#">
-            Увеличивает лайки на фотографиях
-          </a>
-        </li>
-        <li class="about__list">
-          <a class="about__link about__link--tangle" href="#">
-            Связано вручную с любовью и умилением
-          </a>
-        </li>
-        <li class="about__list">
-          <a class="about__link about__link--rocket" href="#">
-            Поддержка отечественного производителя
-          </a>
-        </li>
-        <li class="about__list">
-          <a class="about__link about__link--gift" href="#">
-            Поставляется в подарочной упаковке
-          </a>
-        </li>
+        <ul class="about__list">
+          <li class="about__item">
+            <a class="about__link about__link--flower" href="#">
+              Экологически чистые материалы
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="about__link about__link--banknote" href="#">
+              Скандинавский стиль по российской цене
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="about__link about__link--heart" href="#">
+              Увеличивает лайки на фотографиях
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="about__link about__link--tangle" href="#">
+              Связано вручную с любовью и умилением
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="about__link about__link--rocket" href="#">
+              Поддержка отечественного производителя
+            </a>
+          </li>
+          <li class="about__item">
+            <a class="about__link about__link--gift" href="#">
+              Поставляется в подарочной упаковке
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
@@ -137,7 +139,7 @@
     </main>
     <footer class="main-footer">
       <a class="main-footer__logo" href="#">
-        <img src="mishka-logo-tablet.svg" width="102" height="34" alt="Логотип «Мишка»" />
+        <img src="../source/img/logo-footer.svg" width="102" height="34" alt="Логотип «Мишка»" />
       </a>
       <ul class="main-footer__list">
         <li class="main-footer__item">
