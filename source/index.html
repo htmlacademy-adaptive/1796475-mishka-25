@@ -7,7 +7,7 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo">
-        <img src="../source/img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
+        <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -73,45 +73,34 @@
             <dt class="featured__parameter">Высота:</dt>
             <dd class="featured__value">15 см</dd>
           </dl>
-          <a class="featured_image-link" href="#">
-            <img class="featured_product-image" src="../source/img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки"/>
+          <a class="featured__image-link" href="#">
+            <img class="featured__product-image" src="img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки"/>
           </a>
-          <span class="featured_product-price">Цена: 990 руб.</span>
-          <button class="button featured_button">ЗАКАЗАТЬ</button>
+          <span class="featured__product-price">Цена: 990 руб.</span>
+          <button class="button featured__button">ЗАКАЗАТЬ</button>
         </div>
       </section>
       <section class="about">
         <h2 class="about__title">Коротко о нас</h2>
         <ul class="about__list">
-          <li class="about__item">
-            <a class="about__link about__link--flower" href="#">
-              Экологически чистые материалы
+          <li class="about__item about__item--flower">
+            Экологически чистые материалы
+          </li>
+          <li class="about__item about__item--banknote">
+            Скандинавский стиль по российской цене
+          </li>
+          <li class="about__item about__item--heart">
+            Увеличивает лайки на фотографиях
             </a>
           </li>
-          <li class="about__item">
-            <a class="about__link about__link--banknote" href="#">
-              Скандинавский стиль по российской цене
-            </a>
+          <li class="about__item about__item--tangle">
+            Связано вручную с любовью и умилением
           </li>
-          <li class="about__item">
-            <a class="about__link about__link--heart" href="#">
-              Увеличивает лайки на фотографиях
-            </a>
+          <li class="about__item about__item--rocket">
+            Поддержка отечественного производителя
           </li>
-          <li class="about__item">
-            <a class="about__link about__link--tangle" href="#">
-              Связано вручную с любовью и умилением
-            </a>
-          </li>
-          <li class="about__item">
-            <a class="about__link about__link--rocket" href="#">
-              Поддержка отечественного производителя
-            </a>
-          </li>
-          <li class="about__item">
-            <a class="about__link about__link--gift" href="#">
-              Поставляется в подарочной упаковке
-            </a>
+          <li class="about__item about__item--gift">
+            Поставляется в подарочной упаковке
           </li>
         </ul>
       </section>
@@ -120,10 +109,10 @@
         <p class="reviews__comment">
           Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
         </p>
-        <p class="rewiews__author">Анастасия Красильникова @misssssiskras</p>
+        <p class="reviews__author">Анастасия Красильникова @misssssiskras</p>
         <button class="reviews__button reviews__button--left"><span class="visually-hidden">Стрелка влево</span></button>
         <button class="reviews__button reviews__button--right"><span class="visually-hidden">Стрелка вправо</span></button>
-        <button class="button rewiews_button">НАПИСАТЬ</button>
+        <a class="button reviews__button" href="#">НАПИСАТЬ</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
@@ -134,22 +123,22 @@
           <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшеннаяд. 19/8, офис 101</dd>
         </dl>
         <a class="contacts__map" href="#"><span class="visually-hidden">Карта</span></a>
-        <button class="button contacts_button">НАПИШИТЕ НАМ</button>
+        <a class="button contacts__button" href="#">НАПИШИТЕ НАМ</a>
       </section>
     </main>
     <footer class="main-footer">
       <a class="main-footer__logo" href="#">
-        <img src="../source/img/logo-footer.svg" width="102" height="34" alt="Логотип «Мишка»" />
+        <img src="img/logo-footer.svg" width="102" height="34" alt="Логотип «Мишка»" />
       </a>
       <ul class="main-footer__list">
         <li class="main-footer__item">
-          <a class="main-footer__link"><span class="visually-hidden">Вконтакте</span></a>
+          <a class="social-link social-link--vk"><span class="visually-hidden">Вконтакте</span></a>
         </li>
         <li class="main-footer__item">
-          <a class="main-footer__link"><span class="visually-hidden">Ютуб</span></a>
+          <a class="social-link social-link--youtube"><span class="visually-hidden">Ютуб</span></a>
         </li>
         <li class="main-footer__item">
-          <a class="main-footer__link"><span class="visually-hidden">Телеграм</span></a>
+          <a class="social-link social-link--telegram"><span class="visually-hidden">Телеграм</span></a>
         </li>
       </ul>
       <a class="main-footer__htmlacademy" href="#">
