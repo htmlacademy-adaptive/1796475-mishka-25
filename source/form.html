@@ -45,9 +45,9 @@
     </header>
     <main class="form-container">
       <section class="form-header">
-        <h1 class="form-header__title">Вязание на заказ</h1>
+        <h1 class="page-title form-header__title">Вязание на заказ</h1>
       </section>
-      <section class="form-container">
+      <section class="form-section">
         <form class="form">
           <p class="form__paragraph">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <fieldset class="form__fieldset">
@@ -128,7 +128,7 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">ТЕЛ</legend>
             <label class="visually-hidden form__label" for="tel">телефон</label>
-            <input class="form__input" placeholder="+7 ХХХ ХХХ ХХ ХХ*" type="text" name="name" id="tel" required />
+            <input class="form__input" placeholder="+7 ХХХ ХХХ ХХ ХХ*" type="tel" name="name" id="tel" required />
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">E-MAIL</legend>
@@ -138,10 +138,10 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">ДОП</legend>
             <label class="visually-hidden form__label" for="textarea">Дополнительная информация</label>
-            <textarea class="form__input form__textarea" placeholder="Опишите все ваши пожелания к заказу" name="textarea" id="textarea"></textarea>
+            <textarea class="form__input form__input--textarea" placeholder="Опишите все ваши пожелания к заказу" name="textarea" id="textarea"></textarea>
           </fieldset>
           <p class="form__paragraph">*Поля обязательны для заполнения</p>
-          <a class="button form__button" href="#">Отправить</a>
+          <button class="button form__button" type="submit">Отправить</button>
         </form>
       </section>
     </main>
