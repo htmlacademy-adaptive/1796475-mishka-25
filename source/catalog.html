@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body class="page__body">
   <header class="main-header" href="index.html">
@@ -44,48 +45,55 @@
     </nav>
   </header>
   <main class="catalog-container">
-    <section class="page-header">
-      <h1 class="page-header__title">Каталог товаров</h1>
+    <section class="page-header page-header--catalog">
+      <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
     </section>
     <section class="catalog">
+      <h2 class="visually-hidden">Карточки товаров</h2>
       <ul class="catalog-list">
         <li class="card">
           <a class="card__link" href="#">
             <img class="card__img" src="img/hare.jpg" width="260" height="195" alt="вязанный зайчик" />
           </a>
-          <h3 class="card__title">Зайчик-попрыгайчик</h3>
-          <span class="card__info">Рост 30 см, вес 200 г</span>
-          <span class="card__price">1 200 руб.</span>
-          <button class="card__button" type="button">
-            <span class="visually-hidden">добавить в корзину</span>
-          </button>
+          <div class="сard__description">
+            <h3 class="card__title">Зайчик-попрыгайчик</h3>
+            <span class="card__info">Рост 30 см, вес 200 г</span>
+            <span class="card__price">1 200 руб.</span>
+            <button class="card__button" type="button">
+              <span class="visually-hidden">добавить в корзину</span>
+            </button>
+          </div>
         </li>
         <li class="card">
           <a class="card__link" href="#">
             <img class="card__img" src="img/laundry-basket.jpg" width="260" height="195" alt="корзинка с бельём" />
           </a>
-          <h3 class="card__title">Корзинка для белья</h3>
-          <span class="card__info">Диаметр 15 см, высота 10 см</span>
-          <span class="card__price">690 руб.</span>
-          <button class="card__button" type="button">
-            <span class="visually-hidden">добавить в корзину</span>
-          </button>
+          <div class="сard__description">
+            <h3 class="card__title">Корзинка для белья</h3>
+            <span class="card__info">Диаметр 15 см, высота 10 см</span>
+            <span class="card__price">690 руб.</span>
+            <button class="card__button" type="button">
+              <span class="visually-hidden">добавить в корзину</span>
+            </button>
+          </div>
         </li>
         <li class="card">
           <a class="card__link" href="#">
             <img class="card__img" src="img/toy-basket.jpg" width="260" height="195" alt="корзинка с игрушками" />
           </a>
-          <h3 class="card__title">Большая корзинка для игрушек</h3>
-          <span class="card__info">Диаметр 30 см, высота 30 см</span>
-          <span class="card__price">1 500 руб.</span>
-          <button class="card__button" type="button">
-            <span class="visually-hidden">добавить в корзину</span>
-          </button>
+          <div class="сard__description">
+            <h3 class="card__title">Большая корзинка для игрушек</h3>
+            <span class="card__info">Диаметр 30 см, высота 30 см</span>
+            <span class="card__price">1 500 руб.</span>
+            <button class="card__button" type="button">
+              <span class="visually-hidden">добавить в корзину</span>
+            </button>
+          </div>
         </li>
       </ul>
     </section>
     <section class="production">
-      <h1 class="page-title production__title">Процесс производства</h1>
+      <h2 class="production__title">Процесс производства</h2>
       <img class="production__preview" src="img/preview.jpg" width="260" height="150" alt="превью видеоролика" />
       <button class="play" type="button">
         <span class="visually-hidden">проигрывать</span>
