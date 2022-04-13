@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-display: swap;
+}
+.page__body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #444444;
+  background-color: #ffffff;
+  border: none;
+  width: 260px;
+  padding: 16px 0 16px 0;
+}
+/*Шапка*/
+.main-header__logo {
+  cursor: pointer;
+}
+.site-list {
+  font-weight: 700;
+  font-size: 17px;
+  list-style-type: none;
+}
+.site-list__link {
+  color: #000000;
+  text-decoration: none;
+}
+/*Главная страница*/
+.page-header {
+  display: block;
+  background-color: #f1f1f1;
+  padding: 73px 42px 73px 41px;
+}
+.page-header--main {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  margin: 0 0 36px 0;
+}
+.page-header--form {
+  padding: 73px 42px 73px 41px;
+  margin: 0 0 17px 0;
+}
+.page-header--catalog {
+  padding: 73px 42px 73px 41px;
+  margin: 0 0 30px 0;
+}
+.page-header__title {
+  margin: 0;
+}
+.page-header__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.page-header__link {
+  background-color: #63D1BB;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+}
+.page-header__item:nth-child(2n) .page-header__link {
+  background-color: #56c3b2;
+}
+.featured {
+  margin: 0 0 31px 0;
+}
+.featured__product-name {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+  width: 260px;
+}
+.featured__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #63d1bb;
+}
+.featured__description {
+  color: #444444;
+}
+.featured__list {
+  line-height: 20px;
+  color: #444444;
+}
+.featured__product-price {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: #444444;
+}
+.featured__button {
+  color: #444444;
+}
+.about {
+  color: #000000;
+  margin: 0 0 58px 0;
+}
+.about__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+.about__list {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.about__item {
+  margin: 83px 0 0 0;
+}
+.reviews {
+  margin: 0 0 38px 0;
+}
+.reviews__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0 0 14px 0;
+}
+.reviews__comment {
+  font-size: 14px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0 0 33px 0;
+}
+.reviews__author {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0 0 30px 0;
+}
+.reviews__mail {
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 20px;
+  color: #444444;
+}
+.reviews__button {
+  color: #444444;
+}
+.contacts {
+  margin: 0 0 39px 0;
+}
+.contacts__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  margin: 0;
+}
+.contacts__list {
+  font-size: 14px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+}
+.contacts__map {
+  margin: 0 0 42px 0;
+  display: block;
+}
+.contacts__button {
+  color: #444444;
+}
+/*Футер*/
+.main-footer {
+  background-color: #f1f1f1;
+  padding: 25px 30px 23px 30px;
+}
+.main-footer__logo {
+  display: none;
+}
+.main-footer__list {
+  list-style-type: none;
+  margin: 0 0 51px 0;
+}
+.social-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+}
+.main-footer__htmlacademy {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+/*Форма*/
+.form-container {
+  margin: 0 0 55px 0;
+}
+.form__paragraph {
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+  margin: 0;
+}
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-top: solid 1px #62d1ba;
+}
+.form__legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: #62d1ba;
+  padding: 0 20px 0 0;
+  margin: 0;
+}
+.form__list {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.form__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+/*Каталог*/
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.catalog {
+  margin: 0 0 30px 0;
+}
+.card__img {
+  display: block;
+}
+.сard__description {
+  box-sizing: border-box;
+  width: 260px;
+  border: solid 1px #ececec;
+  padding: 27px 28px 27px 28px;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+.card__info {
+  font-size: 13px;
+  line-height: 30px;
+  color: #444444;
+}
+.card__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+}
+.production {
+  margin: 0 0 58px 0;
+  border: 1px solid #ececec;
+}
+.production__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0;
+  padding: 21px 13px 26px 91px;
+}
+.production__paragraph {
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+  margin: 0;
+}
+/*Модальное окно*/
+.modal__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+}
+.modal__fieldset {
+  border: none;
+}
+.modal__legend {
+  line-height: 30px;
+  text-align: center;
+  color: #444444;
+}
+.modal__list {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.modal__button {
+  color: #ffffff;
+  background-color: #63d1bb;
+}
+/*# sourceMappingURL=style.css.map */
