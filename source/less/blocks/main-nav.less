@@ -1,0 +1,39 @@
+.main-nav {
+
+}
+.main-nav__toggle {
+  width: 21px;
+  height: 20px;
+  padding: 0;
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #231f20;
+    box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
+  }
+  &--open::after {
+    top: 5px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+  &--open::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #231f20;
+    transform: rotate(-45deg);
+  }
+}
+.main-nav__wrapper {
+  display: none;
+}
