@@ -1,7 +1,7 @@
-.main-nav {
-
+.nav {
+  position: relative;
 }
-.main-nav__toggle {
+.nav__toggle {
   width: 21px;
   height: 20px;
   padding: 0;
@@ -33,7 +33,25 @@
     background-color: #231f20;
     transform: rotate(-45deg);
   }
+  &--open~.nav__wrapper {
+    display: block;
+    position: absolute;
+    width: 320px;
+    left: -270px;
+    top: 53px;
+  }
 }
-.main-nav__wrapper {
+.nav__wrapper {
   display: none;
+  left: 0;
+  top: 0;
+}
+@media (min-width: @tablet-width) {
+  .nav__wrapper {
+    display: block;
+    position: static;
+  }
+  .nav__toggle {
+    display: none;
+  }
 }
