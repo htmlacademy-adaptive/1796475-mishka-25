@@ -1,0 +1,19 @@
+.header{
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #ececec;
+    top: 79px;
+  }
+}
+@media (min-width: @tablet-width) {
+  .header{
+    margin: 0 0 -66px 0;
+    &::after {
+      top: 89px;
+    }
+  }
+}
