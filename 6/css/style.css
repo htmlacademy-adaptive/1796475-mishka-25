@@ -37,14 +37,6 @@
 .header {
   position: relative;
 }
-.header::after {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 1px;
-  background-color: #ececec;
-  top: 79px;
-}
 @media (min-width: 768px) {
   .header {
     margin: 0 0 -66px 0;
@@ -319,6 +311,9 @@
   }
 }
 /*Главная страница*/
+.main-container {
+  border-top: 1px solid #ececec;
+}
 .page-header {
   background-color: #f9f9f9;
 }
@@ -1329,7 +1324,7 @@
     height: 2px;
   }
   .form__fieldset--color .form__signature {
-    width: 167px;
+    width: min-content;
   }
   .form__fieldset--name {
     margin: 0 auto 26px auto;
@@ -1657,6 +1652,7 @@
   padding: 21px 13px 26px 91px;
 }
 .production__preview {
+  display: block;
   margin: 0 0 35px 0;
 }
 .production__preview-container {
