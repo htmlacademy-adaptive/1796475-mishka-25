@@ -2,6 +2,7 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -69,7 +70,9 @@
   </header>
   <main class="catalog-container">
     <section class="page-header page-header--catalog">
-      <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
+      <div class="page-header__wrapper page-header__wrapper--catalog">
+        <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
+      </div>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Карточки товаров</h2>
@@ -117,10 +120,12 @@
     </section>
     <section class="production">
       <h2 class="production__title">Процесс производства</h2>
-      <img class="production__preview" src="img/preview.jpg" width="260" height="150" alt="превью видеоролика" />
-      <button class="play" type="button">
-        <span class="visually-hidden">проигрывать</span>
-      </button>
+      <div class="production__preview-container">
+        <img class="production__preview" src="img/preview.jpg" width="260" height="150" alt="превью видеоролика" />
+        <button class="play" type="button">
+          <span class="visually-hidden">проигрывать</span>
+        </button>
+      </div>
       <p class="production__paragraph">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a class="button production__button" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
     </section>
@@ -161,7 +166,7 @@
       </a>
     </div>
   </footer>
-  <div class="modal-container">
+  <div class="modal-container-close">
     <form class="modal">
       <h2 class="modal__title">ДОБАВИТЬ В КОРЗИНУ</h2>
       <fieldset class="modal__fieldset">
@@ -169,23 +174,20 @@
         <ul class="modal__list">
           <li class="modal__item">
             <label class="modal__label">
-              <input class="visually-hidden modal__input" type="radio" name="type" value="S">
-              <span class="modal__control"></span>
-              <span class="modal__signature">S</span>
+              <input class="visually-hidden modal__input" type="radio" name="type" value="S" checked>
+              <span class="modal__control">S</span>
             </label>
           </li>
           <li class="modal__item">
             <label class="modal__label">
               <input class="visually-hidden modal__input" type="radio" name="type" value="M">
-              <span class="modal__control"></span>
-              <span class="modal__signature">M</span>
+              <span class="modal__control">M</span>
             </label>
           </li>
           <li class="modal__item">
             <label class="modal__label">
               <input class="visually-hidden modal__input" type="radio" name="type" value="L">
-              <span class="modal__control"></span>
-              <span class="modal__signature">L</span>
+              <span class="modal__control">L</span>
             </label>
           </li>
         </ul>

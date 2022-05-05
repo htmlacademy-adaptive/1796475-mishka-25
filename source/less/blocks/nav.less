@@ -5,10 +5,9 @@
 .nav__logo {
   display: block;
   box-sizing: border-box;
-  width: 86px;
   height: 79px;
   background-color: #ffffff;
-  padding: 22px 0 22px 0;
+  padding: 22px 0 22px 65px;
   margin: 0 67px 0 auto;
 }
 .nav__toggle {
@@ -45,6 +44,9 @@
   }
   &--open ~ ul {
     display: block;
+  }
+  &--open ~ .second-list {
+    display: none;
   }
 }
 .nav__delivery {
