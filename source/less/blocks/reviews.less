@@ -10,11 +10,13 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+  word-wrap: break-word;
   margin: 0 0 14px 0;
 }
 .reviews__comment {
   font-size: 14px;
   line-height: 30px;
+  word-wrap: break-word;
   color: #444444;
   margin: 0 0 33px 0;
 }
@@ -22,12 +24,14 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  word-wrap: break-word;
   margin: 0 0 30px 0;
 }
 .reviews__mail {
   font-weight: 400;
   font-size: 17px;
   line-height: 30px;
+  word-wrap: break-word;
   color: #444444;
 }
 .reviews__arrows {
@@ -50,6 +54,12 @@
   }
   &--right {
     background-image: url("../img/arrow-right.svg");
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }
 .reviews__button {

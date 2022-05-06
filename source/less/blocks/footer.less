@@ -25,10 +25,17 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+  word-wrap: break-word;
   color: #000000;
   text-decoration: none;
   margin: 0 auto;
   width: 182px;
+  &:hover svg {
+    fill: #46c1ae;
+  }
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 @media (min-width: @tablet-width) {
   .footer__wrapper {

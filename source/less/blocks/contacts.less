@@ -5,6 +5,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+  word-wrap: break-word;
   color: #000000;
   width: 260px;
   margin: 0 auto 28px auto;
@@ -12,6 +13,7 @@
 .contacts__list {
   font-size: 14px;
   line-height: 30px;
+  word-wrap: break-word;
   color: #444444;
   width: 260px;
   margin: 0 auto 62px auto;
@@ -26,6 +28,18 @@
 .contacts__value {
   width: 184px;
   margin: 0;
+}
+.contacts__link {
+  color: #444444;
+  text-decoration: none;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid #46C1AE;
+  &:hover {
+    color: #46C1AE;
+  }
+  &:active {
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
 }
 .contacts__map {
   width: 100vw;

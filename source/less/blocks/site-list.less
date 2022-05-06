@@ -3,6 +3,7 @@
   padding: 0;
   font-weight: 700;
   font-size: 17px;
+  word-wrap: break-word;
   list-style-type: none;
   background-color: #ffffff;
   display: none;
@@ -10,6 +11,7 @@
   top: 80px;
   min-width: 320px;
   width: 100vw;
+  z-index: 1;
 }
 .site-list__item {
   display: flex;
@@ -26,6 +28,12 @@
   color: #000000;
   text-decoration: none;
   margin: 0 auto;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 @media (min-width: @tablet-width) {
   .site-list {
