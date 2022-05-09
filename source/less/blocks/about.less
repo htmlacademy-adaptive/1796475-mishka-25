@@ -23,23 +23,28 @@
   margin: 0;
   padding: 83px 0 0 0;
   background-repeat: no-repeat;
-  background-position: bottom 60px left;
   &--flower {
+    background-position: bottom 57px left 8px;
     background-image:url("../img/icon-1.svg");
   }
   &--banknote {
+    background-position: bottom 67px left;
     background-image:url("../img/icon-3.svg");
   }
   &--tangle {
+    background-position: bottom 57px left 3px;
     background-image:url("../img/icon-2.svg");
   }
   &--rocket {
+    background-position: bottom 67px left -5px;
     background-image:url("../img/icon-4.svg");
   }
   &--gift {
+    background-position: bottom 60px left 3px;
     background-image:url("../img/icon-6.svg");
   }
   &--heart {
+    background-position: bottom 62px left 7px;
     background-image:url("../img/icon-5.svg");
   }
 }
@@ -50,17 +55,21 @@
   .about__title {
     font-size: 43px;
     line-height: 50px;
-    margin: 0 0 0 175px;
+    margin: 0;
   }
   .about__list {
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
   }
   .about__item {
     width: 300px;
     margin: 0 34px 0 0;
+    padding: 112px 0 0 0;
     &--flower {
       order: 1;
+      padding: 95px 0 0 0;
     }
     &--banknote {
       order: 3;
@@ -70,6 +79,7 @@
     }
     &--tangle {
       order: 2;
+      padding: 95px 0 0 0;
     }
     &--rocket {
       order: 4;
@@ -86,9 +96,13 @@
   .about__title {
     font-size: 53px;
     line-height: 57px;
+    margin: 0 0 0 175px;
   }
   .about__list {
-    width: 668px;
+    width: 700px;
     margin: 0 0 0 175px;
+  }
+  .about__item {
+    margin: 0 49px 0 0;
   }
 }

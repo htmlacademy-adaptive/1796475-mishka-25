@@ -58,12 +58,19 @@
   &:hover {
     padding-bottom: 5px;
     margin-top: -5px;
+    & .page-header__svg {
+      opacity: 1;
+    }
+  }
+  &:active .page-header__svg{
+    opacity: 0.3;
   }
 }
 .page-header__item:nth-child(2n) {
   background-color: #56c3b2;
 }
 .page-header__link {
+  position: relative;
   display: block;
   box-sizing: border-box;
   background-color: #63D1BB;
@@ -76,27 +83,15 @@
   padding: 24px 160px 31px 30px;
   margin: 0 auto;
   width: 320px;
+}
+.page-header__svg {
+  position: absolute;
+  top: 23px;
   &--lamp {
-    background-image: url("../img/lamp.svg");
-    background-repeat: no-repeat;
-    background-position: 245px center;
-    &:hover {
-      background-image: url("../img/lamp-hover.svg");
-    }
-    &:active {
-      background-image: url("../img/lamp-active.svg");
-    }
+    left: 247px;
   }
   &--toy {
-    background-image: url("../img/toy.svg");
-    background-repeat: no-repeat;
-    background-position: 235px center;
-    &:hover {
-      background-image: url("../img/toy-hover.svg");
-    }
-    &:active {
-      background-image: url("../img/toy-active.svg");
-    }
+    left: 237px;
   }
 }
 .page-header__item:nth-child(2n) {
@@ -107,6 +102,18 @@
 @media (min-width: @tablet-width) {
   .page-header--main {
     background-image: url("../img/background-desktop.jpg");
+  }
+  .page-header {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 24px;
+      bottom: -11px;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat-x;
+    }
   }
   .page-header__wrapper {
     position: relative;
@@ -154,11 +161,19 @@
     width: 668px;
   }
   .page-header__link {
+    line-height: 30px;
     padding: 25px 167px 34px 36px;
     width: 334px;
   }
 }
 @media (min-width: @desktop-width) {
+  .page-header {
+    &::after {
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      bottom: -20px;
+    }
+  }
   .page-header__wrapper {
     width: 1050px;
     padding: 158px 0 0 0;
@@ -195,11 +210,13 @@
   .page-header__link {
     padding: 25px 350px 34px 36px;
     width: 525px;
+  }
+  .page-header__svg {
     &--lamp {
-      background-position: 448px center;
+      left: 447px;
     }
     &--toy {
-      background-position: 430px center;
+      left: 437px;
     }
   }
 }

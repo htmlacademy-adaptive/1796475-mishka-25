@@ -1,8 +1,14 @@
 .reviews {
-  margin: 0 auto 38px auto;
-  width: 260px;
+  margin: 0 0 38px 0;
+  position: relative;
+  background-image: url("../img/zigzag-line-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 .reviews__wrapper {
+  margin: 0 auto;
+  padding: 0 0 51px 0;
+  width: 260px;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +20,7 @@
   margin: 0 0 14px 0;
 }
 .reviews__comment {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 30px;
   word-wrap: break-word;
   color: #444444;
@@ -23,9 +29,9 @@
 .reviews__author {
   font-weight: 700;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 30px;
   word-wrap: break-word;
-  margin: 0 0 30px 0;
+  margin: 0 0 27px 0;
 }
 .reviews__mail {
   font-weight: 400;
@@ -63,11 +69,15 @@
   }
 }
 .reviews__button {
+  box-sizing: border-box;
   width: 260px;
 }
 @media (min-width: @tablet-width) {
   .reviews {
-    margin: 0 auto 38px auto;
+    background-image: url("../img/zigzag-line-tablet.svg");
+  }
+  .reviews__container {
+    margin: 0 auto;
     width: 768px;
     background-image: url("../img/review-background.jpg");
     background-repeat: no-repeat;
@@ -75,8 +85,8 @@
   }
   .reviews__wrapper {
     width: 668px;
-    margin: 0 auto;
-    padding: 82px 0 0 0;
+    margin: 0 auto 46px auto;
+    padding: 79px 0 97px 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -85,7 +95,7 @@
     order: 1;
     font-size: 43px;
     line-height: 50px;
-    margin: 0 0 38px 0;
+    margin: 5px 0 38px 0;
   }
   .reviews__comment {
     order: 3;
@@ -115,14 +125,23 @@
 @media (min-width: @desktop-width) {
   .reviews {
     width: 1050px;
+    margin: 0 auto 71px auto;
+    background-image: url("../img/zigzag-line-desktop.svg");
+  }
+  .reviews__container {
+    width: 1050px;
   }
   .reviews__wrapper {
     width: 875px;
     margin: 0 0 0 auto;
-    padding: 78px 0 96px 0;
+    padding: 78px 0 150px 0;
   }
   .reviews__title {
+    margin: 0 0 35px 0;
     font-size: 53px;
     line-height: 57px;
+  }
+  .reviews__comment {
+    margin: 0 0 45px 0;
   }
 }
