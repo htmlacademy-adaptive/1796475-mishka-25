@@ -403,10 +403,17 @@
   padding-bottom: 5px;
   margin-top: -5px;
 }
+.page-header__item:hover .page-header__svg {
+  opacity: 1;
+}
+.page-header__item:active .page-header__svg {
+  opacity: 0.3;
+}
 .page-header__item:nth-child(2n) {
   background-color: #56c3b2;
 }
 .page-header__link {
+  position: relative;
   display: block;
   box-sizing: border-box;
   background-color: #63D1BB;
@@ -420,27 +427,15 @@
   margin: 0 auto;
   width: 320px;
 }
-.page-header__link--lamp {
-  background-image: url("../img/lamp.svg");
-  background-repeat: no-repeat;
-  background-position: 245px center;
+.page-header__svg {
+  position: absolute;
+  top: 23px;
 }
-.page-header__link--lamp:hover {
-  background-image: url("../img/lamp-hover.svg");
+.page-header__svg--lamp {
+  left: 247px;
 }
-.page-header__link--lamp:active {
-  background-image: url("../img/lamp-active.svg");
-}
-.page-header__link--toy {
-  background-image: url("../img/toy.svg");
-  background-repeat: no-repeat;
-  background-position: 235px center;
-}
-.page-header__link--toy:hover {
-  background-image: url("../img/toy-hover.svg");
-}
-.page-header__link--toy:active {
-  background-image: url("../img/toy-active.svg");
+.page-header__svg--toy {
+  left: 237px;
 }
 .page-header__item:nth-child(2n) .page-header__link {
   background-color: #56c3b2;
@@ -448,6 +443,18 @@
 @media (min-width: 768px) {
   .page-header--main {
     background-image: url("../img/background-desktop.jpg");
+  }
+  .page-header {
+    position: relative;
+  }
+  .page-header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 24px;
+    bottom: -11px;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-repeat: repeat-x;
   }
   .page-header__wrapper {
     position: relative;
@@ -495,11 +502,17 @@
     width: 668px;
   }
   .page-header__link {
+    line-height: 30px;
     padding: 25px 167px 34px 36px;
     width: 334px;
   }
 }
 @media (min-width: 1150px) {
+  .page-header::after {
+    height: 34px;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    bottom: -20px;
+  }
   .page-header__wrapper {
     width: 1050px;
     padding: 158px 0 0 0;
@@ -537,16 +550,23 @@
     padding: 25px 350px 34px 36px;
     width: 525px;
   }
-  .page-header__link--lamp {
-    background-position: 448px center;
+  .page-header__svg--lamp {
+    left: 447px;
   }
-  .page-header__link--toy {
-    background-position: 430px center;
+  .page-header__svg--toy {
+    left: 437px;
   }
 }
 .featured {
-  margin: 0 auto 73px auto;
+  margin: 0 0 31px 0;
+  background-image: url("../img/zigzag-line-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.featured__wrapper {
+  margin: 0 auto;
   width: 260px;
+  padding: 0 0 42px 0;
 }
 .featured__product-name {
   font-weight: 700;
@@ -609,9 +629,13 @@
 }
 @media (min-width: 768px) {
   .featured {
+    background-image: url("../img/zigzag-line-tablet.svg");
+  }
+  .featured__wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 0 0 69px 0;
     width: 668px;
   }
   .featured__product-name {
@@ -626,7 +650,7 @@
     margin: 0;
     width: 100px;
   }
-  .featured__wrapper {
+  .featured__container {
     width: 668px;
     display: grid;
     grid-template-columns: 292px 334px;
@@ -672,6 +696,12 @@
 @media (min-width: 1150px) {
   .featured {
     width: 1050px;
+    margin: 0 auto 68px auto;
+    background-image: url("../img/zigzag-line-desktop.svg");
+  }
+  .featured__wrapper {
+    padding: 0 0 96px 0;
+    width: 1050px;
   }
   .featured__product-name {
     order: 2;
@@ -685,7 +715,7 @@
     order: 1;
     margin: 0 0 -150px 0;
   }
-  .featured__wrapper {
+  .featured__container {
     order: 3;
     width: 875px;
     grid-template-columns: 292px 525px;
@@ -725,24 +755,29 @@
   margin: 0;
   padding: 83px 0 0 0;
   background-repeat: no-repeat;
-  background-position: bottom 60px left;
 }
 .about__item--flower {
+  background-position: bottom 57px left 8px;
   background-image: url("../img/icon-1.svg");
 }
 .about__item--banknote {
+  background-position: bottom 67px left;
   background-image: url("../img/icon-3.svg");
 }
 .about__item--tangle {
+  background-position: bottom 57px left 3px;
   background-image: url("../img/icon-2.svg");
 }
 .about__item--rocket {
+  background-position: bottom 67px left -5px;
   background-image: url("../img/icon-4.svg");
 }
 .about__item--gift {
+  background-position: bottom 60px left 3px;
   background-image: url("../img/icon-6.svg");
 }
 .about__item--heart {
+  background-position: bottom 62px left 7px;
   background-image: url("../img/icon-5.svg");
 }
 @media (min-width: 768px) {
@@ -752,18 +787,22 @@
   .about__title {
     font-size: 43px;
     line-height: 50px;
-    margin: 0 0 0 175px;
+    margin: 0;
   }
   .about__list {
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
   }
   .about__item {
     width: 300px;
     margin: 0 34px 0 0;
+    padding: 112px 0 0 0;
   }
   .about__item--flower {
     order: 1;
+    padding: 95px 0 0 0;
   }
   .about__item--banknote {
     order: 3;
@@ -773,6 +812,7 @@
   }
   .about__item--tangle {
     order: 2;
+    padding: 95px 0 0 0;
   }
   .about__item--rocket {
     order: 4;
@@ -788,17 +828,27 @@
   .about__title {
     font-size: 53px;
     line-height: 57px;
+    margin: 0 0 0 175px;
   }
   .about__list {
-    width: 668px;
+    width: 700px;
     margin: 0 0 0 175px;
+  }
+  .about__item {
+    margin: 0 49px 0 0;
   }
 }
 .reviews {
-  margin: 0 auto 38px auto;
-  width: 260px;
+  margin: 0 0 38px 0;
+  position: relative;
+  background-image: url("../img/zigzag-line-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 .reviews__wrapper {
+  margin: 0 auto;
+  padding: 0 0 51px 0;
+  width: 260px;
   display: flex;
   flex-direction: column;
 }
@@ -810,7 +860,7 @@
   margin: 0 0 14px 0;
 }
 .reviews__comment {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 30px;
   word-wrap: break-word;
   color: #444444;
@@ -819,9 +869,9 @@
 .reviews__author {
   font-weight: 700;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 30px;
   word-wrap: break-word;
-  margin: 0 0 30px 0;
+  margin: 0 0 27px 0;
 }
 .reviews__mail {
   font-weight: 400;
@@ -859,11 +909,15 @@
   opacity: 0.3;
 }
 .reviews__button {
+  box-sizing: border-box;
   width: 260px;
 }
 @media (min-width: 768px) {
   .reviews {
-    margin: 0 auto 38px auto;
+    background-image: url("../img/zigzag-line-tablet.svg");
+  }
+  .reviews__container {
+    margin: 0 auto;
     width: 768px;
     background-image: url("../img/review-background.jpg");
     background-repeat: no-repeat;
@@ -871,8 +925,8 @@
   }
   .reviews__wrapper {
     width: 668px;
-    margin: 0 auto;
-    padding: 82px 0 0 0;
+    margin: 0 auto 46px auto;
+    padding: 79px 0 97px 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -881,7 +935,7 @@
     order: 1;
     font-size: 43px;
     line-height: 50px;
-    margin: 0 0 38px 0;
+    margin: 5px 0 38px 0;
   }
   .reviews__comment {
     order: 3;
@@ -911,15 +965,24 @@
 @media (min-width: 1150px) {
   .reviews {
     width: 1050px;
+    margin: 0 auto 71px auto;
+    background-image: url("../img/zigzag-line-desktop.svg");
+  }
+  .reviews__container {
+    width: 1050px;
   }
   .reviews__wrapper {
     width: 875px;
     margin: 0 0 0 auto;
-    padding: 78px 0 96px 0;
+    padding: 78px 0 150px 0;
   }
   .reviews__title {
+    margin: 0 0 35px 0;
     font-size: 53px;
     line-height: 57px;
+  }
+  .reviews__comment {
+    margin: 0 0 45px 0;
   }
 }
 .contacts {
@@ -956,7 +1019,7 @@
 .contacts__link {
   color: #444444;
   text-decoration: none;
-  padding: 0 0 4px 0;
+  padding: 0 0 7px 0;
   border-bottom: 1px solid #46C1AE;
 }
 .contacts__link:hover {
@@ -989,7 +1052,7 @@
   .contacts__list {
     font-size: 17px;
     width: 668px;
-    margin: 0 auto 62px auto;
+    margin: 0 auto 47px auto;
   }
   .contacts__parameter {
     width: 76px;
@@ -1007,8 +1070,10 @@
     height: 457px;
   }
   .contacts__button {
+    font-size: 17px;
     width: 230px;
     margin: 0 auto;
+    letter-spacing: -0.7px;
   }
 }
 @media (min-width: 1150px) {
@@ -1025,7 +1090,7 @@
     grid-area: title;
     font-size: 53px;
     line-height: 57px;
-    margin: 79px 0 34px 0;
+    margin: 79px 0 36px 0;
     width: 350px;
   }
   .contacts__list {
@@ -1039,7 +1104,7 @@
   }
   .contacts__parameter {
     width: 78px;
-    margin: 0;
+    margin: 0 0 30px 0;
   }
   .contacts__value {
     width: 218px;
