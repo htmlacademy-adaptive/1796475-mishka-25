@@ -14,7 +14,7 @@
   font-size: 25px;
   line-height: 30px;
   word-wrap: break-word;
-  margin: 0;
+  margin: 0 0 5px 0;
   width: 260px;
 }
 .featured__label {
@@ -27,7 +27,7 @@
 }
 .featured__description {
   color: #444444;
-  margin: 0 0 28px 0;
+  margin: 0 0 19px 0;
 }
 .featured__list {
   line-height: 20px;
@@ -42,7 +42,7 @@
   border-bottom: 1px solid #ececec;
 }
 .featured__cell {
-  padding: 9px 0 9px 0;
+  padding: 8px 0 12px 0;
   &--parameter {
     width: 97px;
   }
@@ -71,19 +71,20 @@
 @media (min-width: @tablet-width) {
   .featured {
     background-image: url("../img/zigzag-line-tablet.svg");
+    margin: 0 0 58px 0;
   }
   .featured__wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 0 69px 0;
+    padding: 0 0 60px 0;
     width: 668px;
   }
   .featured__product-name {
     font-size: 43px;
     line-height: 50px;
     width: 450px;
-    margin: 0 auto 0 0;
+    margin: 0 105px 0 0;
   }
   .featured__label {
     text-align: center;
@@ -100,16 +101,18 @@
     "price img"
     "button img";
     column-gap: 42px;
-    margin: 50px 0 0 0;
+    margin: 37px 0 0 0;
   }
   .featured__description {
     grid-area: description;
-    margin: 0 0 48px 0;
+    margin: 0 0 34px 0;
+    font-size: 17px;
+    line-height: 30px;
   }
   .featured__list {
     grid-area: list;
     width: 292px;
-    margin: 0 0 57px 0;
+    margin: 0 0 49px 0;
   }
   .featured__cell {
     &--value {
@@ -118,7 +121,7 @@
   }
   .featured__image-link {
     grid-area: img;
-    margin: 0;
+    margin: 13px 0 0 0;
   }
   .featured__product-image {
     width: 334px;
@@ -127,7 +130,8 @@
   .featured__product-price {
     grid-area: price;
     width: 292px;
-    margin: 0 0 33px 0;
+    font-size: 20px;
+    margin: 0 0 25px 0;
   }
   .featured__button {
     grid-area: button;
@@ -146,7 +150,7 @@
     background-image: url("../img/zigzag-line-desktop.svg");
   }
   .featured__wrapper {
-    padding: 0 0 96px 0;
+    padding: 0 0 90px 0;
     width: 1050px;
   }
   .featured__product-name {
@@ -155,11 +159,11 @@
     font-size: 53px;
     line-height: 57px;
     width: 545px;
-    margin: 0 0 -150px 0;
+    margin: 67px 0 -150px 0;
   }
   .featured__label {
     order: 1;
-    margin: 0 0 -150px 0;
+    margin: 60px 45px -150px 30px;
   }
   .featured__container {
     order: 3;
@@ -169,11 +173,19 @@
     margin: 0 0 0 175px;
   }
   .featured__description {
-    margin: 153px 0 48px 0;
+    margin: 173px 0 40px 0;
   }
-
+  .featured__list {
+    margin: 0 0 101px 0;
+  }
+  .featured__image-link {
+    margin: 20px 0 0 0;
+  }
   .featured__product-image {
     width: 525px;
     height: 636px;
+  }
+  .featured__product-price {
+    margin: 0 0 22px 0;
   }
 }
