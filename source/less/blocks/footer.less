@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
-  margin: 0 auto 51px auto;
+  margin: 0 auto 53px auto;
   padding: 0;
   width: 142px;
 }
@@ -25,10 +25,17 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+  word-wrap: break-word;
   color: #000000;
   text-decoration: none;
   margin: 0 auto;
   width: 182px;
+  &:hover svg {
+    fill: #46c1ae;
+  }
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 @media (min-width: @tablet-width) {
   .footer__wrapper {
@@ -37,7 +44,7 @@
     align-items: center;
     widtH: 668px;
     margin: 0 auto;
-    padding: 25px 0 23px 0;
+    padding: 50px 0 23px 0;
   }
   .footer__logo {
     display: block;
