@@ -101,7 +101,7 @@
     position: static;
     display: flex;
     flex-wrap: wrap;
-    width: 355px;
+    width: 352px;
     top: 0;
     margin: 0;
   }
@@ -245,19 +245,20 @@
 .nav {
   display: flex;
   position: relative;
+  z-index: 1;
 }
 .nav__logo {
   display: block;
   box-sizing: border-box;
   height: 79px;
   background-color: #ffffff;
-  padding: 22px 0 22px 65px;
+  padding: 22px 0 22px 81px;
   margin: 0 67px 0 auto;
 }
 .nav__toggle {
   width: 21px;
   height: 20px;
-  margin: 29px auto 0 0;
+  margin: 32px auto 0 0;
   background-color: #ffffff;
   border: none;
   position: relative;
@@ -295,6 +296,7 @@
 }
 .nav__delivery {
   display: none;
+  z-index: 1;
   color: #444444;
   font-size: 15px;
   line-height: 24px;
@@ -345,11 +347,11 @@
   background-color: #f9f9f9;
 }
 .page-header--main {
-  margin: 0 0 36px 0;
+  margin: 0 0 30px 0;
   padding: 0;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -17px;
 }
 .page-header--form {
   margin: 0 0 17px 0;
@@ -358,7 +360,7 @@
   margin: 0 0 30px 0;
 }
 .page-header__wrapper {
-  padding: 90px 0 0 0;
+  padding: 73px 0 0 0;
 }
 .page-header__wrapper--catalog {
   padding: 73px 0 73px 0;
@@ -443,6 +445,8 @@
 @media (min-width: 768px) {
   .page-header--main {
     background-image: url("../img/background-desktop.jpg");
+    background-position: center top;
+    margin: 0 0 53px 0;
   }
   .page-header {
     position: relative;
@@ -503,9 +507,16 @@
   }
   .page-header__link {
     line-height: 30px;
+    letter-spacing: 0.5px;
     padding: 25px 167px 34px 36px;
     width: 334px;
   }
+}
+.page-header__svg {
+  top: 30px;
+}
+.page-header__svg--lamp {
+  left: 257px;
 }
 @media (min-width: 1150px) {
   .page-header::after {
@@ -573,7 +584,7 @@
   font-size: 25px;
   line-height: 30px;
   word-wrap: break-word;
-  margin: 0;
+  margin: 0 0 5px 0;
   width: 260px;
 }
 .featured__label {
@@ -586,7 +597,7 @@
 }
 .featured__description {
   color: #444444;
-  margin: 0 0 28px 0;
+  margin: 0 0 19px 0;
 }
 .featured__list {
   line-height: 20px;
@@ -601,7 +612,7 @@
   border-bottom: 1px solid #ececec;
 }
 .featured__cell {
-  padding: 9px 0 9px 0;
+  padding: 8px 0 12px 0;
 }
 .featured__cell--parameter {
   width: 97px;
@@ -630,19 +641,20 @@
 @media (min-width: 768px) {
   .featured {
     background-image: url("../img/zigzag-line-tablet.svg");
+    margin: 0 0 58px 0;
   }
   .featured__wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 0 69px 0;
+    padding: 0 0 60px 0;
     width: 668px;
   }
   .featured__product-name {
     font-size: 43px;
     line-height: 50px;
     width: 450px;
-    margin: 0 auto 0 0;
+    margin: 0 105px 0 0;
   }
   .featured__label {
     text-align: center;
@@ -656,23 +668,25 @@
     grid-template-columns: 292px 334px;
     grid-template-areas: "description img" "list img" "price img" "button img";
     column-gap: 42px;
-    margin: 50px 0 0 0;
+    margin: 37px 0 0 0;
   }
   .featured__description {
     grid-area: description;
-    margin: 0 0 48px 0;
+    margin: 0 0 34px 0;
+    font-size: 17px;
+    line-height: 30px;
   }
   .featured__list {
     grid-area: list;
     width: 292px;
-    margin: 0 0 57px 0;
+    margin: 0 0 49px 0;
   }
   .featured__cell--value {
     width: 195px;
   }
   .featured__image-link {
     grid-area: img;
-    margin: 0;
+    margin: 13px 0 0 0;
   }
   .featured__product-image {
     width: 334px;
@@ -681,7 +695,8 @@
   .featured__product-price {
     grid-area: price;
     width: 292px;
-    margin: 0 0 33px 0;
+    font-size: 20px;
+    margin: 0 0 25px 0;
   }
   .featured__button {
     grid-area: button;
@@ -700,7 +715,7 @@
     background-image: url("../img/zigzag-line-desktop.svg");
   }
   .featured__wrapper {
-    padding: 0 0 96px 0;
+    padding: 0 0 90px 0;
     width: 1050px;
   }
   .featured__product-name {
@@ -709,11 +724,11 @@
     font-size: 53px;
     line-height: 57px;
     width: 545px;
-    margin: 0 0 -150px 0;
+    margin: 67px 0 -150px 0;
   }
   .featured__label {
     order: 1;
-    margin: 0 0 -150px 0;
+    margin: 60px 45px -150px 30px;
   }
   .featured__container {
     order: 3;
@@ -723,11 +738,20 @@
     margin: 0 0 0 175px;
   }
   .featured__description {
-    margin: 153px 0 48px 0;
+    margin: 173px 0 40px 0;
+  }
+  .featured__list {
+    margin: 0 0 101px 0;
+  }
+  .featured__image-link {
+    margin: 20px 0 0 0;
   }
   .featured__product-image {
     width: 525px;
     height: 636px;
+  }
+  .featured__product-price {
+    margin: 0 0 22px 0;
   }
 }
 .about {
@@ -783,6 +807,7 @@
 @media (min-width: 768px) {
   .about {
     width: 668px;
+    margin: 0 auto 80px auto;
   }
   .about__title {
     font-size: 43px;
@@ -802,28 +827,35 @@
   }
   .about__item--flower {
     order: 1;
-    padding: 95px 0 0 0;
+    padding: 97px 0 0 0;
+    background-position: bottom 60px left 8px;
   }
   .about__item--banknote {
     order: 3;
+    background-position: bottom 70px left;
   }
   .about__item--heart {
     order: 5;
+    background-position: bottom 68px left 7px;
   }
   .about__item--tangle {
     order: 2;
-    padding: 95px 0 0 0;
+    padding: 97px 0 0 0;
+    background-position: bottom 61px left 3px;
   }
   .about__item--rocket {
     order: 4;
+    background-position: bottom 72px left -5px;
   }
   .about__item--gift {
     order: 6;
+    background-position: bottom 67px left 3px;
   }
 }
 @media (min-width: 1150px) {
   .about {
     width: 1050px;
+    margin: 0 auto 85px auto;
   }
   .about__title {
     font-size: 53px;
@@ -925,8 +957,8 @@
   }
   .reviews__wrapper {
     width: 668px;
-    margin: 0 auto 46px auto;
-    padding: 79px 0 97px 0;
+    margin: 0 auto 70px auto;
+    padding: 79px 0 100px 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -940,15 +972,19 @@
   .reviews__comment {
     order: 3;
     font-size: 17px;
-    margin: 0 0 61px 0;
+    margin: 0 0 60px 0;
   }
   .reviews__author {
     order: 4;
     font-weight: 700;
     font-size: 17px;
-    line-height: 24px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
     margin: 0 0 30px 0;
     width: 284px;
+  }
+  .reviews__mail {
+    letter-spacing: 0px;
   }
   .reviews__arrows {
     order: 5;
@@ -974,7 +1010,7 @@
   .reviews__wrapper {
     width: 875px;
     margin: 0 0 0 auto;
-    padding: 78px 0 150px 0;
+    padding: 78px 0 155px 0;
   }
   .reviews__title {
     margin: 0 0 35px 0;
@@ -982,7 +1018,11 @@
     line-height: 57px;
   }
   .reviews__comment {
-    margin: 0 0 45px 0;
+    margin: 0 0 43px 0;
+  }
+  .reviews__author {
+    margin: 0 0 30px 0;
+    letter-spacing: 0px;
   }
 }
 .contacts {
@@ -1010,7 +1050,7 @@
 }
 .contacts__parameter {
   width: 76px;
-  margin: 0 0 62px 0;
+  margin: 0 0 30px 0;
 }
 .contacts__value {
   width: 184px;
@@ -1019,7 +1059,7 @@
 .contacts__link {
   color: #444444;
   text-decoration: none;
-  padding: 0 0 7px 0;
+  padding: 0 0 2px 0;
   border-bottom: 1px solid #46C1AE;
 }
 .contacts__link:hover {
@@ -1048,6 +1088,16 @@
     line-height: 50px;
     width: 668px;
     margin: 0 auto 49px auto;
+    position: relative;
+  }
+  .contacts__title::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/flag.svg");
+    width: 50px;
+    height: 81px;
+    bottom: -7px;
+    right: 6px;
   }
   .contacts__list {
     font-size: 17px;
@@ -1093,6 +1143,9 @@
     margin: 79px 0 36px 0;
     width: 350px;
   }
+  .contacts__title::after {
+    left: -115px;
+  }
   .contacts__list {
     box-sizing: border-box;
     grid-area: list;
@@ -1109,6 +1162,9 @@
   .contacts__value {
     width: 218px;
     margin: 0;
+  }
+  .contacts__link {
+    padding: 0 0 7px 0;
   }
   .contacts__map {
     grid-area: map;
@@ -1161,7 +1217,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
-  margin: 0 auto 51px auto;
+  margin: 0 auto 53px auto;
   padding: 0;
   width: 142px;
 }
@@ -1191,7 +1247,7 @@
     align-items: center;
     widtH: 668px;
     margin: 0 auto;
-    padding: 25px 0 23px 0;
+    padding: 50px 0 23px 0;
   }
   .footer__logo {
     display: block;
