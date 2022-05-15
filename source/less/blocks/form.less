@@ -8,7 +8,7 @@
 }
 .form__fieldset {
   padding: 0;
-  margin: 0 auto 31px auto;
+  margin: 0 auto 20px auto;
   border: none;
   width: 260px;
 }
@@ -78,6 +78,7 @@
     border-radius: 50px;
   }
   & .form__signature {
+    padding: 3px 0 0 0;
     width: 200px;
   }
 }
@@ -137,7 +138,10 @@
 .form__fieldset--name {
   margin: 0 auto 12px auto;
   & .form__legend {
-    margin: 0 0 29px 0;
+    margin: 0 0 28px 0;
+  }
+  & .form__label {
+    display: block;
   }
 }
 .form__input {
@@ -152,12 +156,21 @@
   height: 52px;
   border: none;
   border-bottom: 2px solid #000000;
+  padding: 0;
   margin: 0 0 22px 0;
   &:hover {
     border-bottom: 2px solid #62d1ba;
   }
+  &:hover + svg {
+    fill: #62d1ba;
+    opacity: 1;
+  }
   &:not(:placeholder-shown) {
     border: 2px solid #62d1ba;
+  }
+  &:not(:placeholder-shown) + svg {
+    fill: #62d1ba;
+    opacity: 1;
   }
 }
 .form__input::placeholder {
@@ -168,27 +181,41 @@
   line-height: 16px;
 }
 .form__fieldset--telephone {
+  margin: 0 auto 14px auto;
+  position: relative;
   & .form__legend {
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
+  }
+  & svg {
+    position: absolute;
+    top: 30px;
+    right: 6px;
   }
 }
 .form__fieldset--mail {
+  margin: 0 auto 14px auto;
+  position: relative;
   & .form__legend {
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
     &::after {
       width: 182px;
     }
   }
+  & svg {
+    position: absolute;
+    top: 36px;
+    right: 2px;
+  }
 }
 .form__fieldset--addition {
-  margin: 0 auto 17px auto;
+  margin: 0 auto 5px auto;
   & .form__legend {
     margin: 0 0 23px 0;
   }
   & .form__input--textarea {
     border: 2px solid #444444;
     min-height: 142px;
-    padding: 17px;
+    padding: 15px;
     margin: 0;
     &:hover {
       border: 2px solid #62d1ba;
@@ -198,8 +225,12 @@
     }
   }
 }
+.form__paragraph--signature {
+  font-size: 14px;
+}
 .form__button {
   margin: 0 auto 0 auto;
+  padding: 15px 0 15px 0;
   width: 260px;
 }
 @media (min-width: @tablet-width) {
@@ -218,7 +249,7 @@
   }
   .form__legend {
     display: block;
-    padding: 0;
+    padding: 17px 0 0 0;
     margin: 0;
     width: 167px;
     &::after {
@@ -231,9 +262,14 @@
   .form__label {
     font-size: 19px;
   }
+  .form__input {
+    font-size: 19px;
+    padding: 0 0 0 19px;
+  }
   .form__fieldset--type {
+    margin: 0 auto 24px auto;
     & .form__item {
-      margin: 0 0 24px 0;
+      margin: 0 0 27px 0;
     }
     & .form__label {
       width: 499px;
@@ -308,20 +344,26 @@
       align-items: center;
       width: 500px;
     }
+    .form__input {
+      margin: 0 0 24px 0;
+    }
     .form__label--name {
       width: 49px;
+      padding: 0 0 22px 0;
     }
     .form__input--name {
       width: 428px;
     }
     .form__label--surname {
       width: 101px;
+      padding: 0 0 22px 0;
     }
     .form__input--surname {
       width: 375px;
     }
     .form__label--patronymic {
       width: 101px;
+      padding: 0 0 22px 0;
     }
     .form__input--patronymic {
       width: 375px;
@@ -338,6 +380,10 @@
       width: 501px;
       margin: 0 0 24px 0;
     }
+    & svg {
+      top: 61px;
+      right: 23px;
+    }
   }
   .form__fieldset--mail {
     margin: 0 auto 50px auto;
@@ -350,9 +396,13 @@
       width: 501px;
       margin: 0;
     }
+    & svg {
+      top: 16px;
+      right: 23px;
+    }
   }
   .form__fieldset--addition {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 54px auto;
     & .form__legend {
       margin: 0 0 23px 0;
     }
@@ -376,6 +426,7 @@
     order: 2;
     width: 303px;
     margin: 0;
+    font-size: 17px;
   }
 }
 @media (min-width: @desktop-width) {
@@ -383,23 +434,27 @@
     font-size: 17px;
     line-height: 30px;
     margin: 0 auto 63px auto;
-    width: 668px;
+    width: 700px;
   }
   .form__fieldset {
     box-sizing: border-box;
     justify-content: left;
-    width: 956px;
-    padding: 0 100px 0 0;
+    width: 927px;
+    padding: 0 86px 0 0;
   }
   .form__legend {
-    width: 128px;
+    width: 115px;
+    padding: 20px 0 0 0;
   }
   .form__label {
     font-size: 19px;
   }
+  .form__input {
+    padding: 0 0 0 16px;
+  }
   .form__fieldset--type {
     & .form__item {
-      margin: 0 0 24px 0;
+      margin: 0 0 27px 0;
     }
     & .form__label {
       width: 728px;
@@ -410,6 +465,9 @@
   }
   .form__fieldset--color {
     padding: 50px 0 26px 0;
+    & .form__legend {
+      width: 113px;
+    }
     & .form__list {
       grid-template-columns: 262px 264px auto;
       width: 728px;
@@ -435,14 +493,23 @@
     .form__input {
       width: 700px;
     }
+    & svg {
+      top: 61px;
+      right: 123px;
+    }
   }
   .form__fieldset--mail {
     padding: 0 0 50px 0;
     .form__input {
       width: 700px;
     }
+    & svg {
+      top: 16px;
+      right: 118px;
+    }
   }
   .form__fieldset--addition {
+    margin: 0 auto 52px auto;
     & .form__input--textarea {
       width: 700px;
     }
