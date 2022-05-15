@@ -126,6 +126,14 @@
     width: 200px;
   }
 }
+.form__control {
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+  &:active {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+}
 .form__fieldset--name {
   margin: 0 auto 12px auto;
   & .form__legend {
@@ -145,6 +153,12 @@
   border: none;
   border-bottom: 2px solid #000000;
   margin: 0 0 22px 0;
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+  }
+  &:not(:placeholder-shown) {
+    border: 2px solid #62d1ba;
+  }
 }
 .form__input::placeholder {
   color: rgba(0, 0, 0, 0.3);
@@ -176,6 +190,12 @@
     min-height: 142px;
     padding: 17px;
     margin: 0;
+    &:hover {
+      border: 2px solid #62d1ba;
+    }
+    &:not(:placeholder-shown) {
+      border: 2px solid #62d1ba;
+    }
   }
 }
 .form__button {
