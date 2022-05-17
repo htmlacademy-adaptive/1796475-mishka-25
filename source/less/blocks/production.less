@@ -12,6 +12,16 @@
   word-wrap: break-word;
   margin: 0;
   padding: 21px 13px 26px 91px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/video.svg");
+    width: 32px;
+    height: 22px;
+    top: 33px;
+    left: 32px;
+  }
 }
 .production__preview {
   display: block;
@@ -32,6 +42,20 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("../img/play.png");
+  background-size: contain;
+  &:hover {
+    top: 30px;
+    left: 74px;
+    width: 121px;
+    height: 92px;
+  }
+  &:active {
+    top: 37px;
+    left: 84px;
+    width: 81px;
+    height: 62px;
+    opacity: 0.3;
+  }
 }
 .production__paragraph {
   font-size: 13px;
@@ -46,7 +70,7 @@
 }
 @media (min-width: @tablet-width) {
   .production {
-    margin: 0 auto 58px auto;
+    margin: 0 auto 62px auto;
     width: 668px;
     border: 1px solid #ececec;
   }
@@ -54,26 +78,41 @@
     order: -1;
   }
   .production__preview {
-    margin: 0 0 39px 0;
+    margin: 0 0 40px 0;
     width: 668px;
     height: 455px;
   }
   .play {
     top: 189px;
     left: 283px;
+    &:hover {
+      top: 182px;
+      left: 277px;
+    }
+    &:active {
+      top: 189px;
+      left: 287px;
+    }
   }
   .production__title {
     font-size: 20px;
     padding: 0 42px 0 107px;
     margin: 0 0 24px 0;
+    &::after {
+      top: -2px;
+      left: 42px;
+    }
   }
   .production__paragraph {
     font-size: 15px;
     line-height: 30px;
-    margin: 0 40px 40px 40px;
+    margin: 0 40px 41px 40px;
   }
   .production__button {
-    width: 584px;
+    width: 580px;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 16px 0 16px 0;
     margin: 0 auto 46px auto;
   }
 }
@@ -84,7 +123,7 @@
     grid-template-areas: "preview title"
     "preview paragraph"
     "preview button";
-    margin: 0 auto 105px auto;
+    margin: 0 auto 101px auto;
     width: 1050px;
     flex-wrap: wrap;
   }
@@ -101,6 +140,10 @@
     padding: 0 110px 0 79px;
     margin: 96px 0 27px 0;
     width: 178px;
+    &::after {
+      top: -50px;
+      left: 77px;
+    }
   }
   .production__paragraph {
     grid-area: paragraph;

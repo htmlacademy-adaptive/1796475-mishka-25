@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
+  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
 }
 .modal__title {
   font-weight: 700;
@@ -54,6 +55,9 @@
   padding: 18px 0 18px 0;
   text-align: center;
   border: 2px solid rgba(68, 68, 68, 0.1);
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
 }
 .modal__input[type="radio"]:checked + .modal__control {
   border: 2px solid #63d1bb;
@@ -70,10 +74,16 @@
     width: 566px;
   }
   .modal__title {
+    font-size: 30px;
+    line-height: 57px;
     margin: 0 auto 11px auto;
   }
   .modal__fieldset {
-    margin: 0 auto 31px auto;
+    margin: 0 auto 32px auto;
+  }
+  .modal__legend {
+    font-size: 17px;
+    margin: 0 0 20px 0;
   }
   .modal__list {
     width: 350px;
@@ -83,6 +93,8 @@
   }
   .modal__button {
     margin: 0 auto;
+    font-size: 17px;
+    padding: 16px 0 16px 0;
     width: 350px;
   }
 }
