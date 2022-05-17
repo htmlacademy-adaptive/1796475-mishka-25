@@ -451,6 +451,9 @@
   .page-header--form {
     margin: 0 0 66px 0;
   }
+  .page-header--catalog {
+    margin: 0 0 77px 0;
+  }
   .page-header {
     position: relative;
   }
@@ -539,6 +542,9 @@
   }
   .page-header--form {
     margin: 0 0 115px 0;
+  }
+  .page-header--catalog {
+    margin: 0 0 129px 0;
   }
   .page-header__title--main {
     font-size: 53px;
@@ -1929,7 +1935,7 @@
   .card {
     display: flex;
     flex-direction: row;
-    margin: 0 0 30px 0;
+    margin: 0 0 55px 0;
   }
   .card__link {
     width: 334px;
@@ -2059,7 +2065,7 @@
 }
 @media (min-width: 768px) {
   .production {
-    margin: 0 auto 58px auto;
+    margin: 0 auto 62px auto;
     width: 668px;
     border: 1px solid #ececec;
   }
@@ -2067,7 +2073,7 @@
     order: -1;
   }
   .production__preview {
-    margin: 0 0 39px 0;
+    margin: 0 0 40px 0;
     width: 668px;
     height: 455px;
   }
@@ -2095,10 +2101,13 @@
   .production__paragraph {
     font-size: 15px;
     line-height: 30px;
-    margin: 0 40px 40px 40px;
+    margin: 0 40px 41px 40px;
   }
   .production__button {
-    width: 584px;
+    width: 580px;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 16px 0 16px 0;
     margin: 0 auto 46px auto;
   }
 }
@@ -2107,7 +2116,7 @@
     display: grid;
     grid-template-columns: 682px auto;
     grid-template-areas: "preview title" "preview paragraph" "preview button";
-    margin: 0 auto 105px auto;
+    margin: 0 auto 101px auto;
     width: 1050px;
     flex-wrap: wrap;
   }
@@ -2167,6 +2176,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
+  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
 }
 .modal__title {
   font-weight: 700;
@@ -2229,10 +2239,16 @@
     width: 566px;
   }
   .modal__title {
+    font-size: 30px;
+    line-height: 57px;
     margin: 0 auto 11px auto;
   }
   .modal__fieldset {
-    margin: 0 auto 31px auto;
+    margin: 0 auto 32px auto;
+  }
+  .modal__legend {
+    font-size: 17px;
+    margin: 0 0 20px 0;
   }
   .modal__list {
     width: 350px;
@@ -2242,6 +2258,8 @@
   }
   .modal__button {
     margin: 0 auto;
+    font-size: 17px;
+    padding: 16px 0 16px 0;
     width: 350px;
   }
 }
