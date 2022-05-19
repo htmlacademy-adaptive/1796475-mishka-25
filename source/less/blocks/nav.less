@@ -10,6 +10,12 @@
   background-color: #ffffff;
   padding: 22px 0 22px 81px;
   margin: 0 67px 0 auto;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 .nav__toggle {
   width: 21px;
@@ -70,9 +76,11 @@
   }
   .nav__logo {
     margin: 0 auto 0 0;
-    padding: 20px 27px 20px 0;
-    height: 89px;
-    width: 113px;
+    padding: 22px 0 0 0;
+  }
+  .nav__logo-img {
+    width: max-content;
+    height: max-content;
   }
   .nav__toggle {
     display: none;
@@ -88,7 +96,7 @@
   .nav__logo {
     order: 2;
     margin: 0 auto 0 0;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 0 0;
   }
   .nav__delivery {
     order: 5;

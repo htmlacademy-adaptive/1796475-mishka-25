@@ -20,6 +20,7 @@
 }
 .footer__htmlacademy {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
@@ -35,6 +36,15 @@
   }
   &:active svg {
     opacity: 0.3;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 260px;
+    height: 1px;
+    background-color: #e5e5e5;
+    top: -22px;
+    left: -40px;
   }
 }
 @media (min-width: @tablet-width) {
@@ -54,6 +64,9 @@
   }
   .footer__htmlacademy {
     margin: 0;
+    &::before {
+      display: none;
+    }
   }
 }
 @media (min-width: @desktop-width) {

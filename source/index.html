@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico"> <!-- 16×16 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
         <nav class="nav">
           <a class="nav__logo" href="index.html">
-            <img class="nav__logo-img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+              <img class="nav__logo-img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
+            </picture>
           </a>
           <button class="nav__toggle nav__toggle--ope" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav-list">
@@ -120,7 +128,11 @@
               </tr>
             </table>
             <a class="featured__image-link" href="#">
-              <img class="featured__product-image" src="img/triple-set.jpg" width="260" height="315" alt="Вязаные корзинки"/>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="featured__product-image" src="img/triple-set-mobile.jpg" width="260" height="315" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки"/>
+              </picture>
             </a>
             <span class="featured__product-price">Цена: 990 руб.</span>
             <button class="button featured__button">ЗАКАЗАТЬ</button>
