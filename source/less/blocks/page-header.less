@@ -7,6 +7,10 @@
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center -17px;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 .page-header--form {
   margin: 0 0 17px 0;
@@ -104,6 +108,10 @@
     background-image: url("../img/background-desktop.jpg");
     background-position: center top;
     margin: 0 0 53px 0;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
   .page-header--form {
     margin: 0 0 66px 0;
