@@ -41,11 +41,20 @@
     border-bottom: 1px solid rgba(70, 193, 174, 0.1);
   }
 }
+.contacts__map-container {
+  position: relative;
+}
 .contacts__map {
   width: 100vw;
   margin: 0 auto 42px auto;
   display: block;
   border: none;
+}
+.contacts__map-pin {
+  position: absolute;
+  top: 145px;
+  left: 50%;
+  transform: translate(-40%,0);
 }
 .contacts__button {
   color: #444444;
@@ -141,8 +150,10 @@
   .contacts__link {
     padding: 0 0 7px 0;
   }
-  .contacts__map {
+  .contacts__map-container {
     grid-area: map;
+  }
+  .contacts__map {
     width: 527px;
     height: 457px;
     margin: 0 auto 0 auto;
