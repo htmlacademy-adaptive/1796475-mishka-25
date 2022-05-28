@@ -4,11 +4,13 @@
   background-repeat: repeat-x;
   background-position: bottom;
 }
+
 .featured__wrapper {
   margin: 0 auto;
   width: 260px;
   padding: 0 0 42px 0;
 }
+
 .featured__product-name {
   font-weight: 700;
   font-size: 25px;
@@ -17,6 +19,7 @@
   margin: 0 0 5px 0;
   width: 260px;
 }
+
 .featured__label {
   font-weight: 700;
   font-size: 17px;
@@ -25,10 +28,12 @@
   color: #63d1bb;
   margin: 0 0 17px 0;
 }
+
 .featured__description {
   color: #444444;
   margin: 0 0 19px 0;
 }
+
 .featured__list {
   line-height: 20px;
   word-wrap: break-word;
@@ -38,22 +43,28 @@
   flex-wrap: wrap;
   border-collapse: collapse;
 }
+
 .featured__row {
   border-bottom: 1px solid #ececec;
 }
+
 .featured__cell {
   padding: 8px 0 12px 0;
+
   &--parameter {
     width: 97px;
   }
+
   &--value {
     width: 162px;
   }
 }
+
 .featured__image-link {
   display: block;
   margin: 0 0 19px 0;
 }
+
 .featured__product-price {
   display: block;
   font-weight: 700;
@@ -64,15 +75,18 @@
   margin: 0 auto 25px auto;
   color: #444444;
 }
+
 .featured__button {
   color: #444444;
   width: 260px;
 }
+
 @media (min-width: @tablet-width) {
   .featured {
     background-image: url("../img/zigzag-line-tablet.svg");
     margin: 0 0 58px 0;
   }
+
   .featured__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -80,79 +94,84 @@
     padding: 0 0 60px 0;
     width: 668px;
   }
+
   .featured__product-name {
     font-size: 43px;
     line-height: 50px;
     width: 450px;
     margin: 0 105px 0 0;
   }
+
   .featured__label {
     text-align: center;
     line-height: 17px;
     margin: 0;
     width: 100px;
   }
+
   .featured__container {
     width: 668px;
     display: grid;
     grid-template-columns: 292px 334px;
-    grid-template-areas: "description img"
-    "list img"
-    "price img"
-    "button img";
+    grid-template-areas: "description img" "list img" "price img" "button img";
     column-gap: 42px;
     margin: 37px 0 0 0;
   }
+
   .featured__description {
     grid-area: description;
     margin: 0 0 34px 0;
     font-size: 17px;
     line-height: 30px;
   }
+
   .featured__list {
     grid-area: list;
     width: 292px;
     margin: 0 0 49px 0;
   }
+
   .featured__cell {
     &--value {
       width: 195px;
     }
   }
+
   .featured__image-link {
     grid-area: img;
     margin: 13px 0 0 0;
   }
+
   .featured__product-image {
     width: 334px;
     height: 404px;
   }
+
   .featured__product-price {
     grid-area: price;
     width: 292px;
     font-size: 20px;
     margin: 0 0 25px 0;
   }
+
   .featured__button {
     grid-area: button;
     width: 292px;
   }
-  .featured__product-name {
-    font-size: 43px;
-    line-height: 50px;
-    width: 450px;
-  }
 }
+
 @media (min-width: @desktop-width) {
   .featured {
     width: 1050px;
     margin: 0 auto 68px auto;
     background-image: url("../img/zigzag-line-desktop.svg");
   }
+
   .featured__wrapper {
     padding: 0 0 90px 0;
     width: 1050px;
   }
+
   .featured__product-name {
     order: 2;
     z-index: 1;
@@ -161,10 +180,12 @@
     width: 545px;
     margin: 67px 0 -150px 0;
   }
+
   .featured__label {
     order: 1;
     margin: 60px 45px -150px 30px;
   }
+
   .featured__container {
     order: 3;
     width: 875px;
@@ -172,19 +193,24 @@
     column-gap: 58px;
     margin: 0 0 0 175px;
   }
+
   .featured__description {
     margin: 173px 0 40px 0;
   }
+
   .featured__list {
     margin: 0 0 101px 0;
   }
+
   .featured__image-link {
     margin: 20px 0 0 0;
   }
+
   .featured__product-image {
     width: 525px;
     height: 636px;
   }
+
   .featured__product-price {
     margin: 0 0 22px 0;
   }
