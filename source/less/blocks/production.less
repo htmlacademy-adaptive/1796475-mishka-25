@@ -5,6 +5,7 @@
   width: 260px;
   border: 1px solid #ececec;
 }
+
 .production__title {
   font-weight: 700;
   font-size: 17px;
@@ -13,6 +14,7 @@
   margin: 0;
   padding: 21px 13px 26px 91px;
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
@@ -23,13 +25,16 @@
     left: 32px;
   }
 }
+
 .production__preview {
   display: block;
 }
+
 .production__preview-container {
   position: relative;
   margin: 0 0 35px 0;
 }
+
 .production__paragraph {
   font-size: 13px;
   line-height: 24px;
@@ -37,38 +42,46 @@
   color: #444444;
   margin: 0 30px 41px 34px;
 }
+
 .production__button {
   width: 192px;
   margin: 0 auto 33px auto;
 }
+
 @media (min-width: @tablet-width) {
   .production {
     margin: 0 auto 62px auto;
     width: 668px;
     border: 1px solid #ececec;
   }
+
   .production__preview-container {
     order: -1;
     margin: 0 0 40px 0;
   }
+
   .production__preview {
     width: 668px;
     height: 455px;
   }
+
   .production__title {
     font-size: 20px;
     padding: 0 42px 0 107px;
     margin: 0 0 24px 0;
+
     &::after {
       top: -2px;
       left: 42px;
     }
   }
+
   .production__paragraph {
     font-size: 15px;
     line-height: 30px;
     margin: 0 40px 41px 40px;
   }
+
   .production__button {
     width: 580px;
     font-size: 17px;
@@ -77,40 +90,46 @@
     margin: 0 auto 46px auto;
   }
 }
+
 @media (min-width: @desktop-width) {
   .production {
     display: grid;
     grid-template-columns: 682px auto;
-    grid-template-areas: "preview title"
-    "preview paragraph"
-    "preview button";
+    grid-template-areas: "preview title" "preview paragraph" "preview button";
     margin: 0 auto 101px auto;
     width: 1050px;
     flex-wrap: wrap;
   }
+
   .production__preview-container {
     width: 682px;
+    height: 455px;
     grid-area: preview;
     margin: 0;
   }
+
   .production__preview {
     width: 682px;
   }
+
   .production__title {
     grid-area: title;
     padding: 0 110px 0 79px;
     margin: 96px 0 27px 0;
     width: 178px;
+
     &::after {
       top: -50px;
       left: 77px;
     }
   }
+
   .production__paragraph {
     grid-area: paragraph;
     margin: 0 36px 51px 79px;
     width: 252px;
   }
+
   .production__button {
     grid-area: button;
     width: 230px;

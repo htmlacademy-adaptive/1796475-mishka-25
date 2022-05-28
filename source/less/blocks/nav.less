@@ -1,61 +1,31 @@
 .nav {
   display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
 }
+
 .nav__logo {
   display: block;
   box-sizing: border-box;
   height: 79px;
   background-color: #ffffff;
-  padding: 22px 0 22px 81px;
-  margin: 0 67px 0 auto;
+  padding: 22px 0 22px 0;
+  margin: 0 auto 0 auto;
+
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 .nav__toggle {
-  width: 21px;
-  height: 20px;
-  margin: 32px auto 0 0;
-  background-color: #ffffff;
-  border: none;
-  position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 2px;
-    background-color: #231f20;
-    box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
-  }
-  &--open::after {
-    top: 5px;
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-  &--open::before {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 0;
-    width: 20px;
-    height: 2px;
-    background-color: #231f20;
-    transform: rotate(-45deg);
-  }
-  &--open ~ ul {
-    display: block;
-  }
-  &--open ~ .second-list {
-    display: none;
-  }
+  display: none;
 }
+
 .nav__delivery {
   display: none;
   z-index: 1;
@@ -67,37 +37,198 @@
   margin: 0;
   padding: 21px 0 21px 0;
 }
+
+.nav--close {
+  flex-direction: row;
+
+  & .nav__logo {
+    padding: 22px 0 22px 81px;
+    margin: 0 67px 0 auto;
+  }
+
+  & .nav__toggle {
+    display: block;
+    width: 21px;
+    height: 20px;
+    margin: 32px auto 0 0;
+    background-color: #ffffff;
+    border: none;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #231f20;
+      box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
+    }
+  }
+
+  & ul {
+    display: none;
+  }
+}
+
+.nav--open {
+  flex-direction: row;
+
+  & .nav__logo {
+    padding: 22px 0 22px 81px;
+    margin: 0 67px 0 auto;
+  }
+
+  & .nav__toggle {
+    display: block;
+    width: 21px;
+    height: 20px;
+    margin: 32px auto 0 0;
+    background-color: #ffffff;
+    border: none;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #231f20;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #231f20;
+      transform: rotate(-45deg);
+    }
+  }
+
+  & ul {
+    display: block;
+    position: absolute;
+    box-shadow: none;
+  }
+
+  & .second-list {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .nav {
+    flex-direction: row;
     width: 668px;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .nav--close {
+    & .nav__logo {
+      margin: 0 auto 0 0;
+      padding: 22px 0 0 0;
+    }
+
+    & .nav__toggle {
+      display: none;
+    }
+
+    & ul {
+      display: flex;
+    }
+
+    & .second-list {
+      display: none;
+    }
+  }
+
+  .nav--open {
+    & .nav__logo {
+      margin: 0 auto 0 0;
+      padding: 22px 0 0 0;
+    }
+
+    & .nav__toggle {
+      display: none;
+    }
+
+    & ul {
+      display: flex;
+      position: static;
+    }
+
+    & .second-list {
+      display: none;
+    }
+  }
+
   .nav__logo {
     margin: 0 auto 0 0;
     padding: 22px 0 0 0;
   }
+
   .nav__logo-img {
     width: max-content;
     height: max-content;
   }
+
   .nav__toggle {
     display: none;
   }
+
   .nav__delivery {
     display: block;
   }
 }
+
 @media (min-width: @desktop-width) {
   .nav {
     width: 1120px;
   }
+
+  .nav--close {
+    & .nav__logo {
+      margin: 0 auto 0 0;
+      padding: 10px 0 0 0;
+    }
+
+    & .second-list {
+      display: flex;
+    }
+  }
+
+  .nav--open {
+    & .nav__logo {
+      margin: 0 auto 0 0;
+      padding: 10px 0 0 0;
+    }
+
+    & .second-list {
+      display: flex;
+    }
+  }
+
   .nav__logo {
     order: 2;
     margin: 0 auto 0 0;
     padding: 10px 0 0 0;
   }
+
+  .nav__toggle {
+    &--open ~ .second-list {
+      display: flex;
+    }
+  }
+
   .nav__delivery {
     order: 5;
     padding: 21px 35px 21px 0;

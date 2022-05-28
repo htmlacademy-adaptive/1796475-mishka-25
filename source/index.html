@@ -9,10 +9,13 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
+        <!--Мобильное меню: 1) Cостояние "меню открыто в потоке" по классу .nav для элемента <nav> 2) Состояние "Загружается скрипт, меню закрывается" при добавлении класса .nav--close 3) Состояние "Меню открыто вне потока по клику" класс .nav--close заменяется на класс .nav--open -->
         <nav class="nav">
           <a class="nav__logo" href="index.html">
             <picture>
@@ -21,7 +24,6 @@
               <img class="nav__logo-img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»" />
             </picture>
           </a>
-          <!--Мобильное меню открывается c добавлением класса .nav__toggle--open -->
           <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav-list">
             <li class="nav-list__item">
@@ -133,7 +135,7 @@
               </picture>
             </a>
             <span class="featured__product-price">Цена: 990 руб.</span>
-            <button class="button featured__button">ЗАКАЗАТЬ</button>
+            <a class="button featured__button" href="#">ЗАКАЗАТЬ</a>
           </div>
         </div>
       </section>
@@ -200,28 +202,28 @@
         </a>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="social-link social-link--vk"><span class="visually-hidden">Вконтакте</span>
+            <a class="social-link social-link--vk" href="#"><span class="visually-hidden">Вконтакте</span>
               <svg width="28" height="23" viewBox="0 0 28 23" fill="#231F20" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="footer__item">
-            <a class="social-link social-link--youtube"><span class="visually-hidden">Ютуб</span>
+            <a class="social-link social-link--youtube" href="#"><span class="visually-hidden">Ютуб</span>
               <svg width="28" height="23" viewBox="0 0 28 23" fill="#231F20" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
           <li class="footer__item">
-            <a class="social-link social-link--telegram"><span class="visually-hidden">Телеграм</span>
+            <a class="social-link social-link--telegram" href="#"><span class="visually-hidden">Телеграм</span>
               <svg width="28" height="23" viewBox="0 0 28 23" fill="#231F20" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="footer__htmlacademy" href="#">
+        <a class="footer__htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано <span class="visually-hidden">Логотип HTML Academy</span>
           <svg width="27" height="35" viewBox="0 0 27 35" fill="#63D1BB" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
@@ -229,5 +231,35 @@
         </a>
       </div>
     </footer>
+    <!--Модальное окно открывается по классу .modal-container -->
+    <div class="modal-container-close">
+      <form class="modal">
+        <h2 class="modal__title">ДОБАВИТЬ В КОРЗИНУ</h2>
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend">Выберите размер:</legend>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="type" value="S" checked>
+                <span class="modal__control">S</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="type" value="M">
+                <span class="modal__control">M</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="type" value="L">
+                <span class="modal__control">L</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button modal__button" type="submit">ДОБАВИТЬ</button>
+      </form>
+    </div>
   </body>
 </html>

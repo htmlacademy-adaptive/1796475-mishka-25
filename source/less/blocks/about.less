@@ -3,6 +3,7 @@
   margin: 0 auto 58px auto;
   width: 260px;
 }
+
 .about__title {
   margin: 0;
   font-weight: 700;
@@ -10,6 +11,7 @@
   line-height: 30px;
   word-wrap: break-word;
 }
+
 .about__list {
   font-weight: 700;
   font-size: 17px;
@@ -19,97 +21,118 @@
   margin: 0;
   padding: 0;
 }
+
 .about__item {
   margin: 0;
   padding: 83px 0 0 0;
   background-repeat: no-repeat;
+
   &--flower {
-    background-position: bottom 57px left 8px;
-    background-image:url("../img/icon-1.svg");
+    background-position: top 30px left 8px;
+    background-image: url("../img/icon-1.svg");
   }
+
   &--banknote {
-    background-position: bottom 67px left;
-    background-image:url("../img/icon-3.svg");
+    background-position: top 30px left;
+    background-image: url("../img/icon-3.svg");
   }
+
   &--tangle {
-    background-position: bottom 57px left 3px;
-    background-image:url("../img/icon-2.svg");
+    background-position: top 32px left 3px;
+    background-image: url("../img/icon-2.svg");
   }
+
   &--rocket {
-    background-position: bottom 67px left -5px;
-    background-image:url("../img/icon-4.svg");
+    background-position: top 34px left -5px;
+    background-image: url("../img/icon-4.svg");
   }
+
   &--gift {
-    background-position: bottom 60px left 3px;
-    background-image:url("../img/icon-6.svg");
+    background-position: top 32px left 3px;
+    background-image: url("../img/icon-6.svg");
   }
+
   &--heart {
-    background-position: bottom 62px left 7px;
-    background-image:url("../img/icon-5.svg");
+    background-position: top 34px left 7px;
+    background-image: url("../img/icon-5.svg");
   }
 }
+
 @media (min-width: @tablet-width) {
   .about {
     width: 668px;
     margin: 0 auto 80px auto;
   }
+
   .about__title {
     font-size: 43px;
     line-height: 50px;
     margin: 0;
   }
+
   .about__list {
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
     line-height: 22px;
   }
+
   .about__item {
     width: 300px;
     margin: 0 34px 0 0;
     padding: 112px 0 0 0;
+
     &--flower {
       order: 1;
       padding: 97px 0 0 0;
-      background-position: bottom 60px left 8px;
+      background-position: top 40px left 8px;
     }
+
     &--banknote {
       order: 3;
-      background-position: bottom 70px left;
+      background-position: top 56px left;
     }
+
     &--heart {
       order: 5;
-      background-position: bottom 68px left 7px;
+      background-position: top 60px left 7px;
     }
+
     &--tangle {
       order: 2;
       padding: 97px 0 0 0;
-      background-position: bottom 61px left 3px;
+      background-position: top 45px left 3px;
     }
+
     &--rocket {
       order: 4;
-      background-position: bottom 72px left -5px;
+      background-position: top 60px left -5px;
     }
+
     &--gift {
       order: 6;
-      background-position: bottom 67px left 3px;
+      background-position: top 57px left 3px;
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .about {
     width: 1050px;
     margin: 0 auto 85px auto;
   }
+
   .about__title {
     font-size: 53px;
     line-height: 57px;
     margin: 0 0 0 175px;
   }
+
   .about__list {
     width: 700px;
     margin: 0 0 0 175px;
   }
+
   .about__item {
     margin: 0 49px 0 0;
   }
